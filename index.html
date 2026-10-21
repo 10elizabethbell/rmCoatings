@@ -93,7 +93,7 @@ section{padding:64px 0}
 .brand small{font:600 11px/1 var(--text);letter-spacing:.12em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
 .tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 18px/1 var(--display);text-decoration:none;white-space:nowrap}
 .tel svg{width:18px;height:18px;flex:none;color:var(--brass-ink)}
-@media (max-width:419px){.brand small{display:none}.brand img{width:40px}}
+@media (max-width:429px){.brand small{display:none}.brand img{width:40px}}
 @media (max-width:379px){.tel svg{display:none}}
 @media (max-width:339px){.brand img{display:none}}
 
@@ -125,6 +125,7 @@ section{padding:64px 0}
 .fb:focus-visible .arrow{background:var(--brass);outline:3px solid var(--focus);outline-offset:3px}
 
 /* ---------- Services: each row is the link; only the arrow changes on hover ---------- */
+.eg{width:100%;max-width:420px;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-card);margin-top:36px}
 .rows{list-style:none;margin:32px 0 0;padding:0;display:grid}
 .rows a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding:14px 0;border-top:1px solid rgba(255,255,255,.14);color:var(--on-dark);text-decoration:none;font:400 clamp(21px,5.6vw,24px)/1.2 var(--display)}
 .rows li:last-child a{border-bottom:1px solid rgba(255,255,255,.14)}
@@ -208,8 +209,9 @@ html:not(.js) .float{display:none}
   .split{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;column-gap:64px;align-items:start}
   .split .claims{grid-column:2;grid-row:1/3;margin-top:0}
   .split .fb{grid-column:1;grid-row:2}
-  .svc .wrap{display:grid;grid-template-columns:1fr 1.3fr;column-gap:64px;align-items:start}
-  .svc .rows{margin-top:0}
+  .svc .wrap{display:grid;grid-template-columns:1fr 1.3fr;grid-template-rows:auto 1fr;column-gap:64px;align-items:start}
+  .svc .rows{grid-column:2;grid-row:1/3;margin-top:0}
+  .eg{grid-column:1;grid-row:2;margin-top:32px;max-width:360px}
   .ask .wrap{grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
   .ask .head{position:sticky;top:40px}
   .close .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
@@ -265,7 +267,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap hero-copy">
     <p class="eyebrow">Floors and paint</p>
     <h1 id="h1">Make your South Jersey home feel <span class="accent">brand new.</span></h1>
-    <p class="promise">From the floors up to the ceilings, we treat every room like it's in our own house. <b>Your home could be next.</b></p>
+    <p class="promise">We don't stop at the walls: ceilings, trim and doors get a fresh coat too. <b>Your home could be next.</b></p>
     <div class="actions">
       <a class="btn btn-primary" href="#ask">Get a quote</a>
       <a class="btn btn-ghost" data-sms href="sms:+18562815820?&amp;body=Hi%20R%26M%20Coatings%2C%20I%20found%20your%20website.%20I'd%20like%20a%20quote%20for%3A%20"><svg aria-hidden="true"><use href="#i-chat"/></svg>Text us</a>
@@ -296,7 +298,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <div class="head rise">
       <h2 id="h-svc">What we <span class="accent">do.</span></h2>
-      <p class="lede">One room or the whole house. Tap one to ask about it.</p>
+      <p class="lede">Floors, paint, or both. Tap one to ask about it.</p>
     </div>
     <ul class="rows">
       <li class="rise"><a href="#ask" data-job="Floors">Luxury vinyl plank<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
@@ -305,6 +307,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <li class="rise"><a href="#ask" data-job="Painting">Trim and doors<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
       <li class="rise"><a href="#ask" data-job="Whole home">Whole-home refresh<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></a></li>
     </ul>
+    <img class="eg rise" src="lvp-example.webp" width="720" height="900" alt="An empty room with a new light oak luxury vinyl plank floor and fresh grey walls" loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -314,7 +317,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <ol class="steps">
       <li class="rise"><div><b>Tell us about your rooms.</b><span>Text or call, or use the form below.</span></div></li>
       <li class="rise"><div><b>We give you a quote.</b><span>For the floors, the paint, or both.</span></div></li>
-      <li class="rise"><div><b>Your home feels brand new.</b><span>Top to bottom, the way we left Sicklerville.</span></div></li>
+      <li class="rise"><div><b>We do the work.</b><span>Carpet out, new floors in, fresh paint on.</span></div></li>
     </ol>
   </div>
 </section>
@@ -322,7 +325,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-paper ask" id="ask" aria-labelledby="h-ask">
   <div class="wrap">
     <div class="head rise">
-      <p class="eyebrow">Your home could be next</p>
+      <p class="eyebrow">Takes a minute</p>
       <h2 id="h-ask">Ask for a quote</h2>
       <p class="lede">A few lines is plenty. We'll get back to you.</p>
     </div>
@@ -350,8 +353,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <input type="text" id="where" name="where" autocomplete="address-level2" maxlength="60" placeholder="e.g. Sicklerville">
       </div>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg>Text this to R&amp;M</button>
-      <p class="sent" id="sent" role="status" hidden>Didn't open your messages? Call us at <a href="tel:+18562815820">(856) 281-5820</a>, or <button type="button" class="copy" id="copyMsg">copy the message</button>.</p>
-      <p class="after">Opens your messages with this written out.</p>
+      <p class="sent" id="sent" role="status" hidden>Didn't open your messages? <button type="button" class="copy" id="copyMsg">Copy the message</button> and send it to us.</p>
+      <p class="after">Opens your messages with this written out. Rather talk? Call the number just below.</p>
     </form>
   </div>
 </section>
@@ -370,7 +373,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <footer>
   <div class="wrap">
-    <span>R&amp;M Coatings LLC · <span class="nw">(856) 281-5820</span></span>
+    <span>R&amp;M Coatings LLC</span>
     <nav aria-label="Elsewhere">
       <a href="https://www.facebook.com/profile.php?id=61552281577987" rel="noopener">Facebook</a>
     </nav>
