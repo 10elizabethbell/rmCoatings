@@ -68,7 +68,7 @@ section{padding:64px 0}
 .accent{color:var(--brass-ink)}
 .on-navy .accent,.on-deep .accent,.hero .accent{color:var(--brass)}
 .head{display:grid;gap:16px;justify-items:start;max-width:640px}
-.lede{font-size:clamp(17px,4.6vw,19px);color:var(--soft);max-width:38ch}
+.lede{font-size:clamp(18px,4.8vw,20px);color:var(--soft);max-width:38ch}
 .on-navy .lede,.on-deep .lede{color:var(--on-dark-soft)}
 
 /* Eyebrow: a few key headings only. A label, not a button. */
@@ -90,10 +90,11 @@ section{padding:64px 0}
 .brand img{width:44px;height:auto;flex:none}
 .brand .nm{display:flex;flex-direction:column}
 .brand b{font:400 20px/1 var(--display);letter-spacing:.01em;white-space:nowrap}
-.brand small{font:600 10px/1 var(--text);letter-spacing:.14em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.brand small{font:600 11px/1 var(--text);letter-spacing:.12em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
 .tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;font:400 18px/1 var(--display);text-decoration:none;white-space:nowrap}
 .tel svg{width:18px;height:18px;flex:none;color:var(--brass-ink)}
-@media (max-width:389px){.brand small{display:none}.brand img{width:40px}}
+@media (max-width:419px){.brand small{display:none}.brand img{width:40px}}
+@media (max-width:379px){.tel svg{display:none}}
 @media (max-width:339px){.brand img{display:none}}
 
 /* ---------- Hero ---------- */
@@ -104,7 +105,7 @@ section{padding:64px 0}
 .hero h1 .w{display:inline-block;white-space:nowrap}
 .hero h1 .c{display:inline-block;opacity:0;transform:translateX(50px);animation:letter-in 1s cubic-bezier(.34,1.56,.64,1) forwards;animation-delay:calc(var(--i) * 20ms)}
 @keyframes letter-in{to{opacity:1;transform:none}}
-.promise{font-size:clamp(17px,4.7vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:30ch}
+.promise{font-size:clamp(18px,4.8vw,20px);line-height:1.5;color:var(--on-dark-soft);max-width:30ch}
 .promise b{color:var(--on-dark);font-weight:600}
 .actions{display:grid;gap:12px;width:100%;margin-top:4px}
 /* the R&M monogram, large and faint, in the hero's empty right half (desktop only, never behind text) */
@@ -114,8 +115,7 @@ section{padding:64px 0}
 .claims{list-style:none;margin:28px 0 0;padding:0;display:grid}
 .claims li{display:flex;align-items:center;gap:16px;padding:16px 0;font:400 clamp(20px,5.4vw,24px)/1.15 var(--display);color:var(--ink)}
 .claims li+li{border-top:1px solid var(--line)}
-.claims svg{width:40px;height:40px;flex:none;color:var(--brass-ink)}
-.quote{margin-top:24px;font:400 clamp(19px,5vw,22px)/1.35 var(--display);color:var(--ink);max-width:28ch}
+.claims svg{width:36px;height:36px;flex:none;color:var(--brass-ink)}
 .fb{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:72px;padding:14px 16px 14px 22px;border-radius:20px;background:var(--card);color:var(--ink);text-decoration:none;font:400 clamp(18px,5vw,20px)/1.2 var(--display);max-width:440px;box-shadow:0 8px 24px rgba(19,38,63,.08)}
 .fb:hover,.fb:focus-visible{outline:none;background:var(--card)}
 .fb .lbl{display:flex;align-items:center;gap:14px}
@@ -136,14 +136,14 @@ section{padding:64px 0}
 .steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:24px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
 .steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--brass);color:var(--ink);font:400 20px/1 var(--display)}
-.steps b{display:block;font:400 21px/1.2 var(--display);color:var(--on-dark);margin-top:4px}
+.steps b{display:block;font:400 clamp(21px,5.6vw,24px)/1.2 var(--display);color:var(--on-dark);margin-top:4px}
 .steps span{display:block;margin-top:4px}
 
 /* ---------- Form ---------- */
 .ask .wrap{display:grid;gap:28px}
 form{background:var(--card);border-radius:var(--r-card);padding:clamp(20px,5vw,32px);display:grid;gap:20px;max-width:600px}
 .field{display:grid;gap:8px;min-width:0}
-.field label,.field legend{font:400 17px/1.2 var(--display);color:var(--ink);padding:0}
+.field label,.field legend{font:400 16px/1.2 var(--display);color:var(--ink);padding:0}
 .field small{font:400 14px/1 var(--text);color:var(--soft);margin-left:4px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 input[type=text],textarea{width:100%;font:16px/1.4 var(--text);color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:var(--r-field);padding:13px 14px;min-height:52px;caret-color:var(--navy);transition:border-color .15s}
@@ -163,6 +163,7 @@ form .btn-primary:focus-visible{outline:3px solid var(--focus);outline-offset:3p
 .after{font-size:16px;color:var(--soft)}
 .sent{color:var(--ink);font-weight:600}
 .sent a{white-space:nowrap;display:inline-block;padding:11px 0;margin:-11px 0}
+.copy{font:inherit;color:inherit;background:none;border:0;padding:11px 0;margin:-11px 0;min-height:44px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 @media (max-width:380px){.chips label{padding:0 14px}}
 
 /* ---------- Close ---------- */
@@ -181,6 +182,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
 /* ---------- Floating text circle (one circle, never a bottom bar) ---------- */
 .float{position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--brass);color:var(--ink);box-shadow:0 10px 28px rgba(8,20,36,.3);transform:translateY(120px);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .float.on{transform:none}
+html:not(.js) .float{display:none}
 .float svg{width:26px;height:26px}
 .float:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:50%}
 
@@ -213,7 +215,6 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
   .close .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
   .bigtel{margin-top:0}
   .how .steps{grid-template-columns:repeat(3,1fr);gap:40px}
-  .steps b{font-size:22px}
 }
 /* hover styles only where there is a real pointer, so taps don't leave them stuck on */
 @media (hover:hover){
@@ -253,7 +254,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </svg>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#" aria-label="R&amp;M Coatings, back to top"><img src="mark-navy.webp" width="300" height="234" alt=""><span class="nm"><b>R&amp;M Coatings</b><small>Performance. Defined.</small></span></a>
+    <a class="brand" href="#" aria-label="R&amp;M Coatings, back to top"><img src="mark-navy.webp" width="132" height="103" alt=""><span class="nm"><b>R&amp;M Coatings</b><small>Performance. Defined.</small></span></a>
     <a class="tel" href="tel:+18562815820"><svg aria-hidden="true"><use href="#i-phone"/></svg>(856) 281-5820</a>
   </div>
 </header>
@@ -275,17 +276,17 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-paper" aria-labelledby="h-job">
   <div class="wrap split">
     <div class="rise">
-      <p class="eyebrow">Just finished</p>
+      <p class="eyebrow">Recent job</p>
       <h2 id="h-job" style="margin-top:16px">A complete home transformation in Sicklerville.</h2>
-      <p class="quote">“A top-to-bottom refresh that makes the entire home feel brand new.”</p>
+      <p class="lede" style="margin-top:20px">A top-to-bottom refresh that makes the entire home feel brand new.</p>
     </div>
     <ul class="claims">
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 30c6-2 10-8 14-8s6 4 14 2"/><path d="M6 22c6-2 10-8 14-8s6 4 14 2"/><path d="M28 8l6 6M34 8l-6 6"/></svg>Old carpet ripped out</li>
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="32" height="20" rx="2"/><path d="M4 20h32M16 10v10M28 20v10M10 20v10"/></svg>Luxury vinyl plank put in</li>
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="24" height="10" rx="2"/><path d="M30 10h4v8H19v5"/><rect x="16" y="23" width="6" height="12" rx="1.5"/></svg>Ceilings, walls, trim and doors painted</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="15"/><path d="M13 20.5l5 5 9-10"/></svg>Old carpet ripped out</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="15"/><path d="M13 20.5l5 5 9-10"/></svg>Luxury vinyl plank put in</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="15"/><path d="M13 20.5l5 5 9-10"/></svg>Ceilings, walls, trim and doors painted</li>
     </ul>
     <a class="fb rise" href="https://www.facebook.com/profile.php?id=61552281577987" rel="noopener">
-      <span class="lbl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>Click to see more of our work.</span>
+      <span class="lbl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>See more of our work on Facebook</span>
       <span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
     </a>
   </div>
@@ -349,7 +350,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <input type="text" id="where" name="where" autocomplete="address-level2" maxlength="60" placeholder="e.g. Sicklerville">
       </div>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg>Text this to R&amp;M</button>
-      <p class="sent" id="sent" role="status" hidden>Didn't open your messages? Call us at <a href="tel:+18562815820">(856) 281-5820</a>.</p>
+      <p class="sent" id="sent" role="status" hidden>Didn't open your messages? Call us at <a href="tel:+18562815820">(856) 281-5820</a>, or <button type="button" class="copy" id="copyMsg">copy the message</button>.</p>
       <p class="after">Opens your messages with this written out.</p>
     </form>
   </div>
@@ -358,8 +359,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-navy close" id="close" aria-labelledby="h-close">
   <div class="wrap">
     <div class="rise">
-      <h2 id="h-close">R&amp;M Coatings</h2>
-      <p class="who">New floors and fresh paint. Performance, defined.</p>
+      <h2 id="h-close">Call <span class="accent">R&amp;M Coatings.</span></h2>
+      <p class="who">New floors and fresh paint.</p>
       <p class="area">Most recently in Sicklerville, NJ. Not sure we cover your town? Call and ask.</p>
     </div>
     <a class="bigtel rise" href="tel:+18562815820"><svg aria-hidden="true"><use href="#i-phone"/></svg>(856) 281-5820</a>
@@ -405,9 +406,13 @@ document.documentElement.classList.add('js');
       }else if(n.nodeType===1){var copy=n.cloneNode(false);split(n,copy);into.appendChild(copy)}
     });
   }
-  var frag=document.createDocumentFragment();split(h,frag);h.textContent='';h.appendChild(frag);
-  // once the last letter lands, put the plain heading back so kerning and text selection return
-  if(last)last.addEventListener('animationend',function(){h.innerHTML=plain;h.removeAttribute('aria-label')});
+  function run(){
+    var frag=document.createDocumentFragment();split(h,frag);h.textContent='';h.appendChild(frag);
+    // once the last letter lands, put the plain heading back so kerning and text selection return
+    if(last)last.addEventListener('animationend',function(){h.innerHTML=plain;h.removeAttribute('aria-label')});
+  }
+  // wait (briefly) for Cal Sans so the letters don't reflow when the font swaps in
+  if(document.fonts&&document.fonts.load)Promise.race([document.fonts.load('400 1em "Cal Sans"'),new Promise(function(r){setTimeout(r,600)})]).then(run,run);else run();
 })();
 
 /* ===== Service rows pre-select the matching chip in the form ===== */
@@ -422,6 +427,11 @@ document.documentElement.classList.add('js');
 /* ===== Quote form: composes a text to R&M ===== */
 (function(){
   var form=document.getElementById('quoteForm');if(!form)return;
+  var lastMsg='';
+  document.getElementById('copyMsg').addEventListener('click',function(){
+    var b=this;if(!navigator.clipboard)return;
+    navigator.clipboard.writeText(lastMsg).then(function(){b.textContent='message copied'},function(){});
+  });
   function val(id){return document.getElementById(id).value.trim()}
   function mark(id,bad){var f=document.getElementById(id);f.classList.toggle('bad',bad);f.querySelector('input,textarea').setAttribute('aria-invalid',bad?'true':'false')}
   form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&e.target.value.trim())f.classList.remove('bad')});
@@ -435,9 +445,10 @@ document.documentElement.classList.add('js');
     if(j)msg+=' for '+(j.value==='Whole home'?'new floors and painting':j.value==='Floors'?'new floors':'painting');
     msg+='. Rooms: '+what+'.';
     if(where)msg+=' Town: '+where+'.';
+    lastMsg=msg;
     location.href='sms:'+CONFIG.PHONE+'?&body='+encodeURIComponent(msg);
     // if no messages app opened (desktop, some in-app browsers), say what to do instead
-    setTimeout(function(){document.getElementById('sent').hidden=false},900);
+    setTimeout(function(){if(!document.hidden)document.getElementById('sent').hidden=false},900);
   });
 })();
 
