@@ -20,6 +20,24 @@
         ],
         "createdAt": "2026-10-21T18:05:28.354Z",
         "reason": "Detector counts only fixed UI sizes (14/16/18/20); headings are fluid clamp() 30-80px Cal Sans, so the page has a clear scale (calm-photo-style.md type roles)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1877f2",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T18:12:48.074Z",
+        "reason": "Facebook's own brand blue on the Facebook glyph in the 'see more of our work' card; not a palette colour"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T18:12:48.138Z",
+        "reason": "Focus-ring corner radius on :focus-visible outlines (inherited from the DPG reference build), not a surface shape"
       }
     ]
   }
